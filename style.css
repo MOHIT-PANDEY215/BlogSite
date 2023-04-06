@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #EFFFF8;
+    color: #381d1d;
+    overflow-x: hidden;
+}
+
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.main_blog{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin:5dvh 10dvh;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+}
+.heading::after{
+    content: '';
+    background: #b3b2d3;
+    height: 5px;
+    display: block;
+}
+
+.banner{
+    display: flex;
+    gap: 1rem;
+    background-image: url(https://www.fliqaindia.com/static/media/capturing-photos-pic-1.2ce36cf1610cdd62eb83.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    width: 80vw;
+}
+.banner img{
+    flex: 2;
+}
+.banner_detail{
+    width: 500px;
+    padding:  2rem 2rem;
+    letter-spacing: 0.1rem;
+    /* line-height: 2rem; */
+    align-self: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: rgba(123, 123, 117, 0.5);
+    backdrop-filter: blur(50px);
+    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.art_section{
+    display: flex;
+    gap: 2rem;
+    background: #f0ddc5;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+.text{
+    text-align: justify;
+}
+article img{
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0.75px #575757;
+    margin: 1.5rem 0;
+    width: 50%;
+}
+article p{
+    /* width: 80%; */
+    font-size: 1.1rem;
+}
+
+article h2{
+    margin: 2rem 0 1rem 0;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+.about{
+    flex-basis: 20vw;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.footer-container h2{
+    margin-bottom: 1rem;
+}
+.services ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.social-icons{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (max-width:1028px) {
+    .odd{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+    }
+    .even{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    article img{
+        width: 60%;
+    }
+    
+}
+
+@media (max-width: 768px){
+    article img{
+        width: 70%;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
+@media (max-width: 476px){
+    article img{
+        width: 80%;
+    }
+
+}
+@media (prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
